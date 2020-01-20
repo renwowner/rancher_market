@@ -5,7 +5,7 @@ services:
       working_dir: ${working_dir}
       ports:
       - ${nginx_server_port}:80
-      volumems:
+      volumes:
       - ${nginx_volume_to}:${nginx_volume_from}
       tty: true
 
