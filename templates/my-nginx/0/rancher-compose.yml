@@ -1,0 +1,53 @@
+﻿version: '1'
+.catalog:
+   name: "my-nginx"
+   version: "1.0"
+   description: "this is a nginx test"
+   questions:
+      - variable: "nginx_url"
+        description: "请输入nginx镜像地址"
+        label: "ngix url"
+        type: string
+        required: true
+        default: 39.97.187.31
+      - variable: "domain_name"
+        description: "请输入域名称"
+        label: "domain name"
+        required: true
+        type: string
+      - variable: "envoy_log"
+        description: "设置envoy的日志级别"
+        label: "envoy log"
+        type: string
+        default: "info"
+      - variable: "nginx_volume_from"
+        description: "设置nginx-server挂载目录"
+        label: "nginx volume from"
+        type: string
+        required: true
+      - variable: "nginx_volume_to"
+        description: "设置nginx-server主机目录"
+        label: "nginx volume to"
+        type: string
+        required: true
+      - variable: "xds_server_version"
+        description: "输入xds-server镜像版本号"
+        label: "xds server version"
+        required: true
+        type: string
+        default: "1.0"
+      - variable: "nginx_server_port"
+        description: "设置端口映射"
+        label: "nginx server port"
+        required: true
+        type: int
+        required: true
+        default: 81
+      - variable: "working_dir"
+        description: "输入工作目录"
+        label: "working dir"
+        required: true
+        type: string
+        default: "/home/nginx"
+        
+        

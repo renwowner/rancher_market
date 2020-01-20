@@ -1,0 +1,12 @@
+﻿version: '1'
+services:
+   nginx:
+      image: ${nginx_url}/project/nginx
+      working_dir: ${working_dir}
+      ports:
+      - ${nginx_server_port}:80
+      volumems:
+      - ${nginx_volume_to}:${nginx_volume_from}
+      tty: true
+
+         
